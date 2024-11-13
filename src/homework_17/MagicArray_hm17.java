@@ -1,5 +1,7 @@
 package homework_17;
 
+import java.lang.reflect.Array;
+
 public class MagicArray_hm17 {
     private int[] array;
     private int cursor; // присвоено значение по умолчание - 0;
@@ -104,6 +106,7 @@ public class MagicArray_hm17 {
     // Возвращает строковое представление массива
     // [100, 200, 500]
 
+
     public int get(int index) {
         if (index >= 0 && index < cursor) {
             return array[index];
@@ -112,6 +115,22 @@ public class MagicArray_hm17 {
 
     }
 
+    public int[] toArray(){
+        int[] result = new int[cursor];
+
+        for (int i = 0; i < cursor; i++) {
+            result[i] = array[i];
+        }
+        return result;
+    }
+
+    public int lastIndexOf(int value){
+        for (int i = cursor -1; i >=0 ; i--) {
+            if (array[i]== value){
+        }
+    }
+        return value;
+    }
     public int indexOf(int value) {
         for (int i = 0; i < cursor; i++) {
             if (array[i] == value) {
