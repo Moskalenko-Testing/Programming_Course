@@ -15,6 +15,7 @@ Task 1
  */
 public class Calculator {
     public static final double PI = 3.141519;
+
     public static int SumOfIntegers(int a, int b) {
 
         return a + b;
