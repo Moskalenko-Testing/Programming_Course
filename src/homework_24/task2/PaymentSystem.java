@@ -16,5 +16,5 @@ public interface PaymentSystem {
 
     void depositTransfer(double amount);
 
-    void checkBalance();
+    double checkBalance();
 }
