@@ -1,7 +1,7 @@
 package homework_25.MagicArrayGen;
 
 public class MagicArrayGeneric <T> {
-    private Object[] array;
+    private T[] array;
     private int cursor; // присвоено значение по умолчание - 0;
 
     public MagicArrayGeneric() {
@@ -56,7 +56,7 @@ public class MagicArrayGeneric <T> {
     }
 
 
-    void addAll(T... values) {
+    public void addAll(T... values) {
         // с values я могу обращаться точно также, как со ссылкой на массив int
 //        System.out.println("Мы приняли несколько int-ов. А именно: " + values.length);
 //        System.out.println("У каждого значения есть индекс. По индексом 0: " + values[0]);
@@ -67,7 +67,7 @@ public class MagicArrayGeneric <T> {
     }
 
     // Удаление элемента по индексу
-    public Object remove(int index) {
+    public T remove(int index) {
         /*
         1. Проверить валидность индекса (что он не отрицательный и меньше курсора
         2. Запомнить, какое значение находилось под этим индексом
@@ -79,11 +79,11 @@ public class MagicArrayGeneric <T> {
 
         if (index < 0 || index >= cursor) {
             // Индекс не валидный. Ничего в массиве не трогаем
-            return Integer.MIN_VALUE; // Todo переписать потом
+            return null; //
         }
 
         // 2. Запомнить значение
-        T value = (T) array[index];
+        T value = array[index];
         // 3, 4
         // индекс 11, курсор = 12
         //for (int i = 11; i <  12 - 1; i++) {
@@ -105,11 +105,11 @@ public class MagicArrayGeneric <T> {
     // Возвращает строковое представление массива
     // [100, 200, 500]
 
-    public Object get(int index) {
+    public T get(int index) {
         if (index >= 0 && index < cursor) {
             return (T) array[index];
         }
-        return Integer.MIN_VALUE;// TODO поправить обработку
+        return null;// TODO поправить обработку
 
     }
 
@@ -123,9 +123,9 @@ public class MagicArrayGeneric <T> {
 
     }
 
-   public Object set(int index, T newValue){
+   public T set(int index, T newValue){
         if (index < 0 ||index >= cursor){
-            return Integer.MIN_VALUE;// TODO поправить обработку
+            return null;// TODO поправить обработку
         }
         T oldValue =(T) array[index];
        array[index]= newValue;
