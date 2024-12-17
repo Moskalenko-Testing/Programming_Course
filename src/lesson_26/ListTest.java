@@ -1,6 +1,5 @@
 package lesson_26;
 
-import lesson_25.MyList;
 import lists.MyArrayList;
 
 import java.util.Arrays;
@@ -14,7 +13,7 @@ public class ListTest {
         MyArrayList arrayList2 = new MyArrayList<>();
         arrayList2.add("ggtghtrethr");
 
-        MyList<Integer> numbers = new MyArrayList<>();
+        MyArrayList<Integer> numbers = new MyArrayList<>();
         numbers.addAll(1, 2, 3, 4, 5, 6);
         System.out.println(numbers);
 
@@ -27,7 +26,7 @@ public class ListTest {
         numbers.add(100);
 
         System.out.println("\n===================\n");
-        MyList<String> strings = new MyArrayList<>();
+        MyArrayList<String> strings = new MyArrayList<>();
         strings.add("Java");
         strings.addAll("Python", "C#", "Scala", "Kotlin");
         System.out.println(strings);
@@ -48,7 +47,7 @@ public class ListTest {
 
         // Стирание типов в Java
 
-        MyList<String> strings1 = new MyArrayList<>();
+        MyArrayList<String> strings1 = new MyArrayList<>();
         strings1.add("Java");
         String value = strings1.get(0);
         System.out.println(value.toUpperCase());
@@ -59,7 +58,7 @@ public class ListTest {
         System.out.println(i1);
 
 
-        MyList<Double> doubles = new MyArrayList<>();
+        MyArrayList<Double> doubles = new MyArrayList<>();
         Double[] doubles1 = doubles.toArray();
         System.out.println("doubles: " + Arrays.toString(doubles1));
 

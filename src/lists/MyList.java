@@ -1,18 +1,19 @@
-package lesson_25;
+package lists;
 
-public interface MyList <T>{
-    /**
-     * Добавить элемент
-     * @param value
-     */
-    void add(T value);
+public interface MyList <T> extends Iterable<T>{
+ /**
+  * Добавить элемент
+  * @param value
+  */
+
+ void add(T value);
 
 
     /**
      * добавить несколько элементов
      * @param values T[]
      */
-    void addAll(T... values);
+   void addAll(T... values);
 
 
     /**
@@ -63,6 +64,8 @@ public interface MyList <T>{
     boolean remove(T value);
 
 
+
+
     /**
      * Удаляет элемент по индексу.
      * @param index int
@@ -96,4 +99,3 @@ public interface MyList <T>{
 
 
 }
-
