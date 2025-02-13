@@ -271,6 +271,7 @@ public class MyArrayList<T> implements MyList<T> {
 
     }
     public Iterator<T> iterator() {
+
         return new MyIterator();
     }
 
