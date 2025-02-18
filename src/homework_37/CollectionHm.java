@@ -13,5 +13,6 @@ public class CollectionHm {
         result.retainAll(colB);
 
         System.out.println(result);
+
     }
 }
