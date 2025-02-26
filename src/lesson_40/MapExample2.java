@@ -75,6 +75,27 @@ public class MapExample2 {
         System.out.println(map.replace(15,"red"));
 
         System.out.println("map : " + map);
+        System.out.println("\n ============================== \n");
+
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+            // могу с ними что-то делать
+        }
+
+        // Перебор всех пар ключ-значение с возможностью применить к ним какую-то функцию
+//        map.forEach((key, value) -> System.out.println("Key: " + key + " | Value: " + value));
+        map.forEach((k,v) -> System.out.println(k + "=" + v));
+
+
+        System.out.println("\n======== Option 2 - многострочное действие ==== ");
+
+        map.forEach((key, value) -> {
+            System.out.println("Iteration: ");
+            System.out.println("Key: " + key + " | Value: " + value);
+            System.out.println("====================\n");
+        });
+
 
 
 
