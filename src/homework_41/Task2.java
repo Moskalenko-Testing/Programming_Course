@@ -8,6 +8,7 @@ Task 2
  */
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -18,7 +19,10 @@ public class Task2 {
         List<String> strings = List.of("Abracadabra", "Africa", "Abu-dabi", "Georgia", "Mexico", "Argentina");
         strings.stream()
                 .filter(str -> str.startsWith("A"))
-                .sorted().forEach(System.out::println);
+                .sorted()
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
     }
 }
 
